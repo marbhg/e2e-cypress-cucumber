@@ -5,7 +5,8 @@ import {
   } from "@badeball/cypress-cucumber-preprocessor";
   
 
-  When("the user visits homepage", () => {
+  Given("Open the ISTQB Exam document", () => {
+    //Visitar la pagina 
     cy.visit("/");
   });
 

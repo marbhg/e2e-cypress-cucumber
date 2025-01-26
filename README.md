@@ -28,5 +28,5 @@ You can view the latest test results on [Cypress Cloud](https://cloud.cypress.io
 
 
 ##  Run tests on CI with github Actions:
-1. Run tests on CI (Needs permisions): https://github.com/Bootcamp-QA/cypress-bootcampqa/actions/workflows/main.yml
+1. Run tests on CI (Needs permisions): https://github.com/marbhg/e2e-cypress-examenistqb/actions/workflows/main.yml
 

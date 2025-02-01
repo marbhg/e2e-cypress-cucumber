@@ -5,7 +5,7 @@ import {
   } from "@badeball/cypress-cucumber-preprocessor";
   
 
-  Given("Open the ISTQB Exam document", () => {
+  Given("the user visits the ISTQB Exam page", () => {
     //Visitar la pagina del examen 
     cy.visit("/");
 
@@ -14,6 +14,7 @@ import {
 
     //Borrar Cokkies NO ES NECESARIO ya cypress por defecto las borra 
     //cy.clearCookies();
+ 
   });
 
  

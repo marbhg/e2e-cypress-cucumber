@@ -2,6 +2,7 @@ import {
   Given,
   When,
   Then,
+
 } from "@badeball/cypress-cucumber-preprocessor";
 
 When("the user fills in the first name {string}", (name) => {
@@ -13,12 +14,19 @@ When("the user fills in the first name {string}", (name) => {
 
 When("the user fills in the last name {string}", (lastname) => {
   //Obtenemos el elemento nombre y lo limpiamos (borramos el contenido si hay algo escrito)
-  cy.get('[data-testid="last"]').clear();
+cy.get('[data-testid="last"]').clear();
   //Rellenamos el campo name 
-  cy.get('[data-testid="last"]').type(lastname);
+cy.get('[data-testid="last"]').type(lastname);
 });
 
 When("the user press submit button", () => {
   //Validamos el boton para ingresar al examen  
-  cy.get('[data-testid="signup"]').click();
+cy.get('[data-testid="signup"]').click();
 });
+
+When("the user should see the following error message contain {string}", (mensajebienveyerror) => {
+  //Tiene que ser visible el mensaje de bienvenida y el mensaje de invalido  
+  cy.get('data-testid="mensajebienvenida"]').should('be.visible', (mensajebienveyerror));
+});
+
+

@@ -6,5 +6,6 @@ Scenario: Fill de form whith mandatory fields
 Given the user visits the ISTQB Exam page
 When the user fills in the first name "Marbelis"
 And  the user fills in the last name "Hugo"
+And the user press submit button 
 
 

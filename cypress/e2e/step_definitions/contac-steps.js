@@ -18,5 +18,7 @@ When("the user fills in the last name {string}", (lastname) => {
   cy.get('[data-testid="last"]').type(lastname);
 });
 
-
-
+When("the user press submit button", () => {
+  //Validamos el boton para ingresar al examen  
+  cy.get('[data-testid="signup"]').click();
+});

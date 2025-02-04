@@ -1,7 +1,7 @@
+
 Feature: contac 
 
 As a student, when you enter the exam page you must register.
-
 
 
 Scenario: Fill out the form with the empty fields

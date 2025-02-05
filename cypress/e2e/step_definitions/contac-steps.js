@@ -24,19 +24,6 @@ When("the user press submit button", () => {
 cy.get('[data-testid="signup"]').click();
 });
 
-
-Then("validate that the exam  appear", () => {
-  //Obtenemos el titulo del examen  
-  cy.get('[data-testid="examen"]').should('be.visible');
-});
-
-
-Then("validate that the exam does not appear", () => {
-  //Obtenemos el titulo del examen  
-  cy.get('[data-testid="examen"]').should('not.be.visible');
-});
-
-
 When("the user should see  message {string}", (mensajebienveyerror) => {
   //Tiene que ser visible el mensaje de bienvenida y el mensaje de invalido  
   cy.get('[data-testid="mensajebienvenida"]').should('contain', (mensajebienveyerror));

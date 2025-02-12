@@ -16,8 +16,8 @@ Then validate that the exam section is displayed
 Scenario: Fill out the form with the empty fields
 Given the user visits the ISTQB Exam page
 And the user press submit button 
-Then the user should see  message "Invalid form"
-And the registration form 
+Then the user should see message "Invalid form"
+
 
 
 

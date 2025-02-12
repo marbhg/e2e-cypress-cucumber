@@ -4,8 +4,8 @@ import {
   Then,
 } from "@badeball/cypress-cucumber-preprocessor";
 
-When("the user selects option {string} on question number {string}", (option, resp1) => {
-  cy.get('[data-testid="resp1"]').select(option);
+When("the user selects option {string} on question number {string}", (option, questionnumber) => {
+  cy.get('[data-testid="resp' + questionnumber + '"]').select(option);
 });
 
 Then("the user click on the Evaluate everything button", () => {
@@ -13,11 +13,13 @@ Then("the user click on the Evaluate everything button", () => {
   cy.get('[data-testid="buttonfinish"]').click();
 });
 
-When("the user should see score {string} for question {string}", (option, resp1) => {
+When("the user should see score {string} for question {string}", (option, questionnumber) => {
   //Validar la puntuacion de las preguntas 
-cy.get('[data-testid="resultadopregunta1" ' + resp1 + '"]').should('contains', option);
+  cy.get('[data-testid="resultadopregunta' + questionnumber + '"]').should('exist').should('contain', option);
+  cy.get('#grademessage10').should('exist').should('be.visible').should('contain', '0');
 });
 
-Then("The user must see the score in green if they are approved ", () => {
-//El usuario debe ver la puntuacion en verde si el examen esta aprobado 
-});
+Then("The user must see the score in {string} if they are approved ", (coloresultado) => {
+  //El susuario debe ver el msnaje en verde si esta aprovado y en rojo si esta suspenso 
+  cy.get('[data-testid="finishresults' + coloresultado + '"]').should ( 'have.css' , 'color' , 'rgba(0, 0, 0, 0.87)' )
+});  

@@ -24,9 +24,11 @@ When("the user press submit button", () => {
 cy.get('[data-testid="signup"]').click();
 });
 
-When("the user should see  message {string}", (mensajebienveyerror) => {
+When("the user should see message {string}", (mensajebienveyerror) => {
   //Tiene que ser visible el mensaje de bienvenida y el mensaje de invalido  
-  cy.get('[data-testid="mensajebienvenida"]').should('contain', (mensajebienveyerror));
+cy.get('[data-testid="mensajebienvenida"]').should('contain', (mensajebienveyerror));
 });
 
-
+When("validate that the exam section is displayed", () => {
+cy.get('[data-testid="examen"]').should('be.visible');
+});

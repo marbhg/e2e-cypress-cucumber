@@ -22,13 +22,17 @@ Then("the user should see final score color green", () => {
   cy.get('[data-testid="resultado-finales"]').should('have.css', 'color', 'rgb(0, 128, 0)');
 });
 
-
-Then("the user should see final score {string}",() => {
-  //El susuario debe ver el numero correcto de preguntas contestadas correctamente 
-  cy.get('[data-testid="resultado-finales"]').should('contain', '13');
-});  
-
+Then("the user should see final score {string}", (resultadonumero) => { // 
+   cy.get('[data-testid="resultado-finales"]').then($element);
+   const scoreText = $element.text().trim(); 
+     expect(scoreText).to.equal(resultadonumero);
+  });
+  
 Then("the user should see final score color red", () => {
   //El susuario debe ver el msnaje en rojo si esta suspenso
-  cy.get('[data-testid="resultado-finales"]').should ( 'have.css' , 'color' , 'rgba(0, 0, 0, 0.87)' )
+  cy.get('[data-testid="resultado-finales"]').should ( 'have.css' , 'color' , 'rgb(255, 0, 0)' )
 }); 
+
+When("the user clicks on the Evaluate everything button", () => {
+  cy.get('[data-testid="buttonfinish"]').click(); 
+  });

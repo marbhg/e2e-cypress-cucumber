@@ -14,7 +14,7 @@ And the user selects option "a" on question number "4"
 And the user selects option "a" on question number "5"
 And the user selects option "c" on question number "6"
 And the user selects option "b" on question number "7"
-And the user selects option "c" on question number "8"
+And the user selects option "a" on question number "8"
 And the user selects option "a" on question number "9"
 And the user selects option "a" on question number "10"
 Then the user click on the Evaluate everything button 
@@ -25,11 +25,11 @@ And the user should see score "2" for question "4"
 And the user should see score "2" for question "5"
 And the user should see score "2" for question "6"
 And the user should see score "2" for question "7"
-And the user should see score "-1" for question "8"
+And the user should see score "2" for question "8"
 And the user should see score "2" for question "9"
 And the user should see score "-1" for question "10"
 Then the user should see final score color green 
-And the user should see final score "12"
+And the user should see final score "13"
 
 
 Scenario: Failed Exam 

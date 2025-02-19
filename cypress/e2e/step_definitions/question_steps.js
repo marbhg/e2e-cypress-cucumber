@@ -23,7 +23,7 @@ Then("the user should see final score color green", () => {
 });
 
 Then("the user should see final score {string}", (resultadonumero) => { // 
-   cy.get('[data-testid="resultado-finales"]').should(be.visible);
+   cy.get('[data-testid="resultado-finales"]').should('contain',resultadonumero);
   });
   
 Then("the user should see final score color red", () => {

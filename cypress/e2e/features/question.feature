@@ -29,7 +29,7 @@ And the user should see score "2" for question "8"
 And the user should see score "2" for question "9"
 And the user should see score "-1" for question "10"
 Then the user should see final score color green 
-And the user should see final score "13"
+And the user should see final score "15"
 
 
 Scenario: Failed Exam 
@@ -45,17 +45,19 @@ And the user selects option "c" on question number "7"
 And the user selects option "c" on question number "8"
 Then the user click on the Evaluate everything button 
 And the user should see score "2" for question "1"
-And the user should see score "2" for question "2"
+And the user should see score "-1" for question "2"
 And the user should see score "0" for question "3"
-And the user should see score "-1" for question "4"
-And the user should see score "2" for question "5"
-And the user should see score "2" for question "6"
-And the user should see score "2" for question "7"
+And the user should see score "0" for question "4"
+And the user should see score "-1" for question "5"
+And the user should see score "-1" for question "6"
+And the user should see score "-1" for question "7"
 And the user should see score "-1" for question "8"
-And the user should see score "2" for question "9"
-And the user should see score "-1" for question "10"
+And the user should see score "0" for question "9"
+And the user should see score "0" for question "10"
 Then the user should see final score color red
 And the user should see final score "0"
+
+
 
 
 
